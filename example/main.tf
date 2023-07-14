@@ -1,7 +1,6 @@
 module "cache_policy" {
-  #   source  = "blackbird-cloud/cloudfront/aws//modules/cache-policy"
-  #   version = "~> 1"
-  source = "../modules/cache-policy"
+  source  = "blackbird-cloud/cloudfront/aws//modules/cache-policy"
+  version = "~> 1"
 
   name                          = "my-policy"
   min_ttl                       = 300
