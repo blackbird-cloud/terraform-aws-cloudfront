@@ -1,24 +1,3 @@
-# AWS Cloudfront Terraform modules
-A Terraform module which helps you create AWS Cloudfront resources. Read [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) page for more information.
-
-[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
-
-## Example
-```hcl
-module "cache_policy" {
-  #   source  = "blackbird-cloud/cloudfront/aws//modules/cache-policy"
-  #   version = "~> 1"
-  source = "../modules/cache-policy"
-
-  name                          = "my-policy"
-  min_ttl                       = 300
-  default_ttl                   = 0
-  max_ttl                       = 0
-  description                   = "My cache policy"
-  enable_accept_encoding_gzip   = false
-  enable_accept_encoding_brotli = false
-}
-```
 ## Cache Policy
 A Terraform module which helps you create AWS Cloudfront Cache Policies. Read [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) page for more information.
 
@@ -61,13 +40,3 @@ A Terraform module which helps you create AWS Cloudfront Cache Policies. Read [t
 | Name | Description |
 |------|-------------|
 | <a name="output_cache_policy"></a> [cache\_policy](#output\_cache\_policy) | The created Cloudfront Cache policy. |
-
-## About
-
-We are [Blackbird Cloud](https://blackbird.cloud), Amsterdam based cloud consultancy, and cloud management service provider. We help companies build secure, cost efficient, and scale-able solutions.
-
-Checkout our other :point\_right: [terraform modules](https://registry.terraform.io/namespaces/blackbird-cloud)
-
-## Copyright
-
-Copyright © 2017-2023 [Blackbird Cloud](https://blackbird.cloud)
