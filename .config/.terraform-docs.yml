@@ -10,20 +10,27 @@ output:
     {{ .Content }}
 
 sections:
-  show:
-    - header
-    - footer
+  hide:
+    - modules
 
 content: |-
-  {{ .Header }}
+  {{ include "./.config/title.md"}}
 
-  # AWS Cloudfront Terraform modules
-  A Terraform module which helps you create AWS Cloudfront resources. Read [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) page for more information.
+  {{ .Header }}
 
   ## Example
   ```hcl
   {{ include "./example/main.tf" }}
   ```
-  {{ include "./modules/cache-policy/README.md" }}
+
+  {{ .Requirements }}
+
+  {{ .Providers }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
 
   {{ .Footer }}
